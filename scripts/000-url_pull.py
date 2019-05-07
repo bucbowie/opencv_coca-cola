@@ -2,7 +2,7 @@ import urllib
 import cv2
 import numpy as np
 import os
-'''001-if-000-fails_url_pull.py
+'''000-url_pull.pyy
 pulls images off the intenet and saves
 them locally, as-is. The images are taken
 from image-net.org and uses the url_id 
@@ -13,7 +13,7 @@ to the list of images we wish to download.'''
 def check_directories(in_dir):
 #--------------------------------#
     if not os.path.exists(in_dir):
-        print("Error: 001-if-000-fails_url_pull.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
+        print("Error: 000-url_pull.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
         raise FileNotFoundError
 
 #--------------------------------#

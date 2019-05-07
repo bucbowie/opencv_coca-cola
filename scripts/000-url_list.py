@@ -2,7 +2,7 @@ import urllib
 import cv2
 import numpy as np
 import os
-''' 001-if-000-fails_url_list.py pulls
+''' 000-url_list.pyy pulls
 images from the intenet - image-net.org.
 The url selection comes from a list stored
 locally and each line in the url list is 
@@ -16,7 +16,7 @@ images'''
 def check_directories(in_dir):
 #--------------------------------#
     if not os.path.exists(in_dir):
-        print("Error: 001-if-000-fails_url_list.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
+        print("Error: 000-url_list.pyy \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
         raise FileNotFoundError
 
 #--------------------------------#
