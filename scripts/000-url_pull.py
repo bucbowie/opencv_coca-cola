@@ -2,7 +2,7 @@ import urllib
 import cv2
 import numpy as np
 import os
-'''000-url_pull.pyy
+'''000-url_pull.py
 pulls images off the intenet and saves
 them locally, as-is. The images are taken
 from image-net.org and uses the url_id 
@@ -14,7 +14,7 @@ def check_directories(in_dir):
 #--------------------------------#
     if not os.path.exists(in_dir):
         print("Error: 000-url_pull.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
-        raise FileNotFoundError
+        raise ValueError("Unable to find or access needed input", in_dir)
 
 #--------------------------------#
 def ensure_directories(my_dir):
