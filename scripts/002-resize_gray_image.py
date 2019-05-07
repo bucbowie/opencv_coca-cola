@@ -4,7 +4,7 @@ import numpy as np
 import os
 import errno
 
-'''002-if-000-fails-resize.py reads in 
+'''002-resize_gray_image.py reads in 
 a list of images and does 2 things:
     1. Change image to grayscale
     2. Resize image to 100x100 - size for neg. images
@@ -13,7 +13,7 @@ a list of images and does 2 things:
 def check_directories(in_dir):
 #--------------------------------#
     if not os.path.exists(in_dir):
-        print("Error: 002-if-000-fails-resize.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
+        print("Error: 002-resize_gray_image.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
         raise ValueError("Unable to find or access needed input ==>",  in_dir)
 
 #--------------------------------#
