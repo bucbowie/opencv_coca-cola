@@ -2,7 +2,8 @@ import urllib
 import cv2
 import numpy as np
 import os
-''' 000-url_list.pyy pulls
+import errno
+''' 000-url_list.py pulls
 images from the intenet - image-net.org.
 The url selection comes from a list stored
 locally and each line in the url list is 
@@ -13,17 +14,17 @@ variable so it does not overwrite existing
 images'''
 
 #--------------------------------#
-def check_directories(in_dir):
+def check_directories(my_list_of_url):
 #--------------------------------#
-    if not os.path.exists(in_dir):
-        print("Error: 000-url_list.pyy \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(in_dir))
-        raise FileNotFoundError
+    if not os.path.exists(my_list_of_url):
+        print("Error: 000-url_list.py \n--------------------------------#\nThe needed input directory: {0}\ndoes not exist and impedes running this program.\nEnsure directory {0} exists, is readable,\n".format(my_list_of_url))
+        raise ValueError("Unable to find or access needed input", my_list_of_url)
 
 #--------------------------------#
-def ensure_directories(my_dir):
+def ensure_directories(scrape_dir):
 #--------------------------------#
-    if not os.path.exists(my_dir):
-        os.makedirs(my_dir)
+    if not os.path.exists(scrape_dir):
+        os.makedirs(scrape_dir)
 
 #--------------------------------#
 def scrap_raw(my_list_of_url):
