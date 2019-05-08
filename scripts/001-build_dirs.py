@@ -2,7 +2,7 @@ import os
 main_dir="/root/opencv_python"
 my_dir=""
 
-'''"003-build_dirs.py"
+'''"001-build_dirs.py"
 builds the renaming directories.
 The out_dirs are used to hold the finished images,
 from which processing will start.
